@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: fadeIn 2s ease-in;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #cce7ff;
+    color: #003366;
+    font-size: 1.8rem;
+    animation: slideDown 1s ease-out;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#countdown {
+    display: flex;
+    gap: 1.5rem;
+    animation: zoomIn 1.5s ease-out;
+}
+
+.time-box {
+    background-color: #ffffffcc;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.time-box:hover {
+    transform: scale(1.1);
+}
+
+.time-box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003366;
+}
+
+.time-box small {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+#current-time {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    background-color: #d9f0ff;
+    color: #003366;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
